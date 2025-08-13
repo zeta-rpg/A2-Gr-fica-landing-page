@@ -63,7 +63,7 @@ Proyecto personal para aprender Astro y hacer una página sencilla de ventas.
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/zeta-rpg/A2-Gr-fica-landing-page.git
+git clone https://github.com/zeta-rpg/a2-grafica-page
 ````
 
 2. Entra al directorio del proyecto:
