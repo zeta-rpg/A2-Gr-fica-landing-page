@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# A2-Gr-fica-landing-page
+# a2-landing-page
 Basado en la landing page https://www.imprimime.com.ar/ con un toque mas minimalista y moderno
 =======
 # Astro Starter Kit: Basics
