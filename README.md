@@ -87,7 +87,7 @@ npm run dev
 5. Abre tu navegador y visita:
 
 ```
-http://localhost:3000
+http://localhost:4321
 ```
 
 ---
@@ -100,7 +100,7 @@ http://localhost:3000
 2. Clona tu fork localmente:
 
    ```bash
-   git clone https://github.com/TU_USUARIO/A2-Gr-fica-landing-page.git
+   git clone https://github.com/zeta-rpg/A2-Gr-fica-landing-page.git
    ```
 3. Crea una nueva rama para tu cambio:
 
