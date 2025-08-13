@@ -4,12 +4,6 @@ Basado en la landing page https://www.imprimime.com.ar/ con un toque mas minimal
 =======
 # Astro Starter Kit: Basics
 
-```sh
-pnpm create astro@latest -- --template basics
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
@@ -46,10 +40,6 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
 ## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
->>>>>>> 0ccdec7 (El proyecto recien comienza)
->>>>>>> Claro, aquí tienes el mismo README pero sin los logos para que quede más simple y limpio:
 
 ````markdown
 # Landing page para tienda A2 Gráfica
@@ -130,8 +120,5 @@ http://localhost:3000
    ```
 6. Abre un **pull request** desde GitHub describiendo los cambios realizados.
 
-```
 
-¿Quieres que te lo deje listo para copiar y pegar?
-```
 
