@@ -1,0 +1,46 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    image: string;
+    precio: number;
+}
+const  {title, description, image, precio} = Astro.props;
+
+---
+
+<div class="producto">
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <img src={image} alt={title} />
+    <p>Precio: ${precio.toFixed(2)}</p>
+    <button>Comprar</button>
+</div>
+
+<style>
+    button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 16px;
+        cursor: pointer;
+    }
+    .producto {
+        border: 1px solid #0a001d;
+        border-radius: 5px;
+        padding: 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: aliceblue;
+    }
+
+    .producto img {
+        max-width: 60%;
+        height: auto;
+        border-radius: 5px;
+        margin: auto
+    }
+</style>

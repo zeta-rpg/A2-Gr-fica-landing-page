@@ -1,0 +1,147 @@
+---
+import ItemsMenu from './Items-menu.astro';
+---
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+
+<div class="menu-main">
+	<div class="menu-busqueda">
+        <a href="#">
+            <img src="/src/assets/logo.jpg" alt="A2-Gráfica">
+        </a>
+        <div class="busqueda">
+            <input type="search" placeholder="Buscar...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+        <a href="#" class="carrito"> <i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <nav class="navigation-menu">
+        <ul class="nav-links">
+           <ItemsMenu title="Tarjetas" items={["Visitas", "Cumpleaños", "Bodas", "Tarjetas Personalizadas"]} link="#" />
+           <ItemsMenu title="Folletos" items={["Trípticos", "Dípticos", "Monográficos"]} link="#" />
+           <ItemsMenu title="Autoadhesivos" items={["Vinilos", "Etiquetas", "Calcomanías"]} link="#" />
+           <ItemsMenu title="Banners" items={["Roll-ups", "Pendones", "Mallas"]} link="#" />
+           <ItemsMenu title="Gigantografías" items={["Pósters", "Murales", "Carteles", "Gigantografías Personalizadas"]} link="#" />
+           <ItemsMenu title="Publicaciones" items={["Revistas", "Catálogos", "Libros"]} link="#" />
+        </ul>
+    </nav>
+</div>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    a {
+        text-decoration: none;
+        color: #f1f2f18e;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Contenedor principal */
+    .menu-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(to right, #030e24, #0a3766);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* Parte superior del menú */
+    .menu-busqueda {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 40px;
+    }
+
+    .menu-busqueda .busqueda {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-busqueda .busqueda input {
+        padding: 8px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        width: 450px;
+    }
+
+    .menu-busqueda .busqueda input:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .menu-busqueda .busqueda button {
+        padding: 8px 14px;
+        border: none;
+        background-color: #0a3766;
+        color: #f1f2f1;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        width: 60px;
+    }
+    .menu-busqueda .busqueda button:hover {
+        background-color: #0f4f92;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .menu-busqueda a > img {
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .carrito {
+        background-color: #052f5c;
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+        color: #f1f2f1a3;
+    }
+    .carrito:hover {
+        background-color: #06213d;
+        color: #f1f2f1;
+    }
+
+    /* Menú inferior de navegación */
+    .navigation-menu {
+        width: 100%;
+        background: linear-gradient(to left, #030e24, #0a3766);
+        padding: 0px 0;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .nav-links li a {
+        position: relative;
+    }
+
+    .nav-links li:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Animación suave */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+

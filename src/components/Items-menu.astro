@@ -1,0 +1,83 @@
+---
+interface Props {
+  title: string;
+  items: string[];
+  link?: string;
+}
+
+const { title, items, link } = Astro.props;
+---
+
+<li class="dropdown">
+  <a href={link} class="dropbtn">
+    {title}
+  </a>
+  <ul class="dropdown-content">
+    {items.map((item) => (
+      <li><a href="#">{item}</a></li>
+    ))}
+  </ul>
+</li>
+
+<style>
+    li{
+        list-style: none;
+        margin: 0;
+    }
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > a {
+    color: #f1f2f1;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+    z-index: 999;
+    padding: 0;
+  }
+
+  
+  .dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    color: #0a3766;
+    text-decoration: none;
+    
+  }
+
+  .dropdown-content li a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Mostrar en hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover > a {
+    background: #f1f2f1;
+    color: #0a3766;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

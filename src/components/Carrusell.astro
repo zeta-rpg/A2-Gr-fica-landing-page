@@ -1,0 +1,139 @@
+---
+import SliderOne from "../assets/1.jpeg";
+import SliderTwo from "../assets/2.png";
+import SliderThree from "../assets/3.png";
+import ImageMain from "../assets/main2.png";
+---
+<div class="carrusel">
+    <div class="carrusel-prev">❮</div>
+    <div class="carrusel-items">
+        <div class="car-slide">
+            <img src={ImageMain.src} alt="Carrusel main image">
+        </div>
+        <div class="car-slide">
+            <img src={SliderOne.src} alt="Carrusel image 1">
+        </div>
+        <div class="car-slide">
+            <img src={SliderTwo.src} alt="Carrusel image 2">
+        </div>
+        <div class="car-slide">
+            <img src={SliderThree.src} alt="Carrusel image 3">
+        </div>
+    </div>
+    <div class="carrusel-next">❯</div>
+    <span class="carrusel-indicators">
+        <span class="carrusel-indicator active"></span>
+        <span class="carrusel-indicator"></span>
+        <span class="carrusel-indicator"></span>
+        <span class="carrusel-indicator"></span>
+    </span>
+</div>
+
+<style>
+    .carrusel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        margin: 0;
+    }
+    .carrusel-items {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100vw;
+    }
+    .car-slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .car-slide img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .carrusel-prev,
+    .carrusel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    .carrusel-prev {
+        left: 1rem;
+    }
+    .carrusel-next {
+        right: 1rem;
+    }
+    .carrusel-indicators {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.5rem;
+    }
+    .carrusel-indicator {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .carrusel-indicator:hover {
+        background: #666;
+    }
+    .carrusel-indicator.active {
+        background: #333;
+    }
+</style>
+
+<script>
+    const next = document.querySelector('.carrusel-next');
+    const prev = document.querySelector('.carrusel-prev');
+    const items = document.querySelector('.carrusel-items');
+    const indicators = document.querySelectorAll('.carrusel-indicator');
+    let currentIndex = 0;
+
+    next?.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % indicators.length;
+        updateCarousel();
+    });
+    prev?.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + indicators.length) % indicators.length;
+        updateCarousel();
+    });
+
+    let updateCarousel = () => {
+        if (items) {
+            (items as HTMLElement).style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    updateCarousel();
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % indicators.length;
+        updateCarousel();
+    }, 5000);
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+</script>
+
+

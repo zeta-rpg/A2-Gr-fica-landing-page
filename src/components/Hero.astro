@@ -1,0 +1,77 @@
+---
+import Image from "../assets/main1.jpg";
+import ImageProducto from "../assets/producto.jpeg";
+import Productos from "./Productos.astro";
+import Carrusel from "./Carrusell.astro";
+
+---
+
+<main>
+    <div class="grid-content">
+        <img src={Image.src} alt="Hero image">
+        <Carrusel />
+    </div>
+    <h2 class="gradient-text">Nuestros Productos</h2>
+    <div class="productos-container">
+        <Productos title="Producto 1" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={9.99} />
+        <Productos title="Producto 2" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={19.99} />
+        <Productos title="Producto 3" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={29.99} />
+        <Productos title="Producto 4" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={39.99} />
+        <Productos title="Producto 5" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={49.99} />
+        <Productos title="Producto 6" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={59.99} />
+        <Productos title="Producto 7" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={69.99} />
+        <Productos title="Producto 8" description="Lorem ipsum dolor sit amet" image={ImageProducto.src} precio={79.99} />
+    </div>
+</main>
+
+<style>
+    main {
+        width: 95%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 700px 20px;
+    }
+
+    main h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #0a3766;
+        font-weight: bold;
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, #04ffee, #180cff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .grid-content {
+        display: grid;
+        place-items: center;
+        gap: 10px;
+    }
+   
+
+    .grid-content img {
+        width: 100%;
+        height: auto;
+}
+.productos-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 50px;
+        background-color: #4a637d56;
+        width: auto;
+        padding: 70px;
+    }
+
+    .productos-container .producto {
+        flex: 1;
+        max-width: 300px;
+    }
+</style>
