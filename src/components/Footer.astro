@@ -218,15 +218,106 @@
         color: #04ffee;
     }
 
+    /* Responsive - Tablet */
+    @media (max-width: 1024px) {
+        .footer {
+            padding: 50px 0 15px;
+        }
+
+        .footer-content {
+            gap: 30px;
+            padding: 0 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.1rem;
+        }
+    }
     @media (max-width: 768px) {
+        .footer {
+            padding: 40px 0 15px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            padding: 0 10px;
+        }
+
         .footer-bottom {
             flex-direction: column;
             gap: 15px;
             text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         .newsletter {
             flex-direction: column;
+            gap: 8px;
+        }
+
+        .newsletter button {
+            padding: 8px 15px;
+        }
+
+        .social-links {
+            gap: 10px;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+        }
+
+        .footer-section p {
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            gap: 15px;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+        }
+    }
+
+    /* Responsive - Small Mobile */
+    @media (max-width: 480px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.85rem;
+        }
+
+        .contact-info p {
+            font-size: 0.85rem;
+        }
+
+        .newsletter input {
+            padding: 8px;
+        }
+
+        .footer-links {
+            flex-direction: column;
+            gap: 10px;
         }
     }
 </style>

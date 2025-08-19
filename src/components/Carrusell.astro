@@ -92,6 +92,78 @@ import ImageMain from "../assets/main2.png";
     .carrusel-indicator.active {
         background: #333;
     }
+
+    /* Responsive - Tablet */
+    @media (max-width: 1024px) {
+        .carrusel-prev,
+        .carrusel-next {
+            padding: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        .carrusel-prev {
+            left: 0.5rem;
+        }
+
+        .carrusel-next {
+            right: 0.5rem;
+        }
+
+        .carrusel-indicators {
+            bottom: 0.5rem;
+        }
+
+        .carrusel-indicator {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    /* Responsive - Mobile */
+    @media (max-width: 768px) {
+        .carrusel-prev,
+        .carrusel-next {
+            padding: 0.3rem;
+            font-size: 0.8rem;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carrusel-prev {
+            left: 0.3rem;
+        }
+
+        .carrusel-next {
+            right: 0.3rem;
+        }
+
+        .carrusel-indicators {
+            bottom: 0.3rem;
+            gap: 0.3rem;
+        }
+
+        .carrusel-indicator {
+            width: 6px;
+            height: 6px;
+        }
+    }
+
+    /* Responsive - Small Mobile */
+    @media (max-width: 480px) {
+        .carrusel-prev,
+        .carrusel-next {
+            width: 25px;
+            height: 25px;
+            font-size: 0.7rem;
+        }
+
+        .carrusel-indicators {
+            bottom: 0.2rem;
+        }
+    }
 </style>
 
 <script>

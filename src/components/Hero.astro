@@ -147,28 +147,111 @@ import Carrusel from "./Carrusell.astro";
         max-width: 300px;
     }
 
+    /* Responsive - Tablet */
+    @media (max-width: 1024px) {
+        main {
+            padding: 100px 15px 60px;
+        }
+
+        .grid-content {
+            gap: 40px;
+            max-width: 900px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .productos-container {
+            padding: 50px 40px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        }
+    }
     @media (max-width: 768px) {
+        main {
+            padding: 90px 10px 50px;
+        }
+
         .grid-content {
             grid-template-columns: 1fr;
             gap: 40px;
             text-align: center;
+            max-width: 100%;
         }
 
         .hero-title {
             font-size: 2.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            margin-bottom: 25px;
         }
 
         .hero-buttons {
             justify-content: center;
+            gap: 15px;
         }
 
         .btn-primary, .btn-secondary {
             padding: 12px 25px;
             font-size: 1rem;
+            min-width: 140px;
         }
 
         .productos-container {
-            padding: 40px 20px;
+            padding: 30px 15px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        main h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+    }
+
+    /* Responsive - Small Mobile */
+    @media (max-width: 480px) {
+        main {
+            padding: 80px 5px 40px;
+        }
+
+        .hero-text {
+            padding: 0 10px;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-primary, .btn-secondary {
+            width: 100%;
+            max-width: 250px;
+            padding: 14px 20px;
+        }
+
+        .productos-container {
+            grid-template-columns: 1fr;
+            padding: 20px 10px;
+        }
+
+        main h2 {
+            font-size: 1.6rem;
         }
     }
 </style>

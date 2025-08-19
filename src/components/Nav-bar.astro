@@ -20,6 +20,11 @@ import ItemsMenu from './Items-menu.astro';
         </div>
         
         <a href="#" class="carrito"> <i class="fa-solid fa-cart-shopping"></i></a>
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 
     <nav class="navigation-menu">
@@ -68,6 +73,7 @@ import ItemsMenu from './Items-menu.astro';
         align-items: center;
         width: 100%;
         padding: 10px 40px;
+        position: relative;
     }
 
     .menu-busqueda .busqueda {
@@ -118,6 +124,24 @@ import ItemsMenu from './Items-menu.astro';
         color: #f1f2f1;
     }
 
+    /* Botón hamburguesa */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #f1f2f1;
+        margin: 3px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+    }
     /* Menú inferior de navegación */
     .navigation-menu {
         width: 100%;
@@ -146,20 +170,97 @@ import ItemsMenu from './Items-menu.astro';
         to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Responsive */
+    /* Responsive - Tablet */
+    @media (max-width: 1024px) {
+        .menu-busqueda {
+            padding: 10px 30px;
+        }
+
+        .menu-busqueda .busqueda input {
+            width: 300px;
+        }
+
+        .nav-links {
+            gap: 25px;
+        }
+    }
+
+    /* Responsive - Mobile */
     @media (max-width: 768px) {
         .menu-busqueda {
             padding: 10px 20px;
         }
 
         .menu-busqueda .busqueda input {
-            width: 200px;
+            width: 180px;
+            font-size: 14px;
+        }
+
+        .menu-busqueda .busqueda button {
+            width: 45px;
+            padding: 8px 10px;
+        }
+
+        .menu-busqueda a > img {
+            height: 40px;
+        }
+
+        .carrito {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+
+        .navigation-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, #030e24, #0a3766);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .navigation-menu.active {
+            display: block;
         }
 
         .nav-links {
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            gap: 0;
+            padding: 20px 0;
+        }
+
+        .nav-links li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-links li:last-child {
+            border-bottom: none;
+        }
+    }
+
+    /* Responsive - Small Mobile */
+    @media (max-width: 480px) {
+        .menu-busqueda {
+            padding: 8px 15px;
+        }
+
+        .menu-busqueda .busqueda {
+            flex: 1;
+            margin: 0 15px;
+        }
+
+        .menu-busqueda .busqueda input {
+            width: 100%;
+            min-width: 120px;
+        }
+
+        .menu-busqueda a > img {
+            height: 35px;
         }
     }
 </style>

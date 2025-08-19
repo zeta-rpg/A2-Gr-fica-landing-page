@@ -102,15 +102,90 @@ const  {title, description, image, precio} = Astro.props;
         box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
     }
 
+    /* Responsive - Tablet */
+    @media (max-width: 1024px) {
+        .producto img {
+            height: 180px;
+        }
+
+        .producto-content {
+            padding: 18px;
+        }
+
+        .producto h3 {
+            font-size: 1.2rem;
+        }
+
+        .precio {
+            font-size: 1.3rem;
+        }
+
+        .btn-comprar {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+    }
     @media (max-width: 768px) {
+        .producto img {
+            height: 160px;
+        }
+
+        .producto-content {
+            padding: 15px;
+        }
+
+        .producto h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .producto p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
         .producto-footer {
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             align-items: stretch;
+        }
+
+        .precio {
+            font-size: 1.2rem;
+            text-align: center;
         }
 
         .btn-comprar {
             justify-content: center;
+            padding: 10px 15px;
+        }
+    }
+
+    /* Responsive - Small Mobile */
+    @media (max-width: 480px) {
+        .producto img {
+            height: 140px;
+        }
+
+        .producto-content {
+            padding: 12px;
+        }
+
+        .producto h3 {
+            font-size: 1rem;
+        }
+
+        .producto p {
+            font-size: 0.85rem;
+        }
+
+        .precio {
+            font-size: 1.1rem;
+        }
+
+        .btn-comprar {
+            padding: 8px 12px;
+            font-size: 0.85rem;
         }
     }
 </style>
