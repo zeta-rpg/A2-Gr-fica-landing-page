@@ -1,0 +1,232 @@
+---
+---
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>A2 Gráfica</h3>
+            <p>Donde comienzan tus ideas. Especialistas en impresión digital y diseño gráfico con más de 10 años de experiencia.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Servicios</h4>
+            <ul>
+                <li><a href="#">Tarjetas Personales</a></li>
+                <li><a href="#">Folletos y Trípticos</a></li>
+                <li><a href="#">Autoadhesivos</a></li>
+                <li><a href="#">Banners y Roll-ups</a></li>
+                <li><a href="#">Gigantografías</a></li>
+                <li><a href="#">Publicaciones</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+                <p><i class="fas fa-envelope"></i> info@a2grafica.com.ar</p>
+                <p><i class="fas fa-clock"></i> Lun - Vie: 9:00 - 18:00</p>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Suscríbete para recibir ofertas especiales y novedades</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Tu email">
+                <button type="submit">Suscribirse</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 A2 Gráfica. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background: linear-gradient(135deg, #030e24, #0a3766);
+        color: #f1f2f1;
+        padding: 60px 0 20px;
+        margin-top: 80px;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .footer-section h3 {
+        color: #04ffee;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .footer-section h4 {
+        color: #04ffee;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-section p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #b8c5d1;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+        color: #b8c5d1;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+        color: #04ffee;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(4, 255, 238, 0.1);
+        border-radius: 50%;
+        color: #04ffee;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+        background: #04ffee;
+        color: #030e24;
+        transform: translateY(-2px);
+    }
+
+    .contact-info p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info i {
+        color: #04ffee;
+        width: 16px;
+    }
+
+    .newsletter {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .newsletter input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #f1f2f1;
+        border: 1px solid rgba(4, 255, 238, 0.3);
+    }
+
+    .newsletter input::placeholder {
+        color: #b8c5d1;
+    }
+
+    .newsletter input:focus {
+        outline: none;
+        border-color: #04ffee;
+        box-shadow: 0 0 10px rgba(4, 255, 238, 0.3);
+    }
+
+    .newsletter button {
+        padding: 10px 20px;
+        background: linear-gradient(45deg, #04ffee, #180cff);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+
+    .newsletter button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(4, 255, 238, 0.4);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(4, 255, 238, 0.2);
+        margin-top: 40px;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-links a {
+        color: #b8c5d1;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #04ffee;
+    }
+
+    @media (max-width: 768px) {
+        .footer-bottom {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .newsletter {
+            flex-direction: column;
+        }
+    }
+</style>

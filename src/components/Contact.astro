@@ -1,0 +1,290 @@
+---
+---
+
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2 class="gradient-text">¿Listo para comenzar tu proyecto?</h2>
+            <p>Contáctanos y recibe una cotización personalizada en menos de 24 horas</p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Nuestra Ubicación</h3>
+                    <p>Av. Principal 123<br>Ciudad, Provincia<br>Código Postal 1234</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p>+54 11 1234-5678<br>+54 11 8765-4321</p>
+                    <a href="tel:+541112345678" class="contact-link">Llamar ahora</a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Chatea con nosotros<br>Respuesta inmediata</p>
+                    <a href="https://wa.me/541112345678" class="contact-link whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Escribir
+                    </a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>info@a2grafica.com.ar<br>ventas@a2grafica.com.ar</p>
+                    <a href="mailto:info@a2grafica.com.ar" class="contact-link">Enviar email</a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form class="form">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Servicio de interés</label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="tarjetas">Tarjetas Personales</option>
+                            <option value="folletos">Folletos y Trípticos</option>
+                            <option value="autoadhesivos">Autoadhesivos</option>
+                            <option value="banners">Banners y Roll-ups</option>
+                            <option value="gigantografias">Gigantografías</option>
+                            <option value="publicaciones">Publicaciones</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar consulta
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #030e24 0%, #0a3766 100%);
+        color: white;
+    }
+
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .contact-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, #04ffee, #180cff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .contact-header p {
+        font-size: 1.2rem;
+        color: #b8c5d1;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: start;
+    }
+
+    .contact-info {
+        display: grid;
+        gap: 30px;
+    }
+
+    .info-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid rgba(4, 255, 238, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(4, 255, 238, 0.2);
+    }
+
+    .info-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(45deg, #04ffee, #180cff);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    .info-card h3 {
+        color: #04ffee;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .info-card p {
+        color: #b8c5d1;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #04ffee;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 16px;
+        border: 1px solid #04ffee;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .contact-link:hover {
+        background: #04ffee;
+        color: #030e24;
+        transform: translateY(-2px);
+    }
+
+    .contact-link.whatsapp {
+        background: #25d366;
+        border-color: #25d366;
+        color: white;
+    }
+
+    .contact-link.whatsapp:hover {
+        background: #128c7e;
+        border-color: #128c7e;
+    }
+
+    .contact-form {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid rgba(4, 255, 238, 0.2);
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #04ffee;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgba(4, 255, 238, 0.3);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        font-size: 1rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #b8c5d1;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #04ffee;
+        box-shadow: 0 0 10px rgba(4, 255, 238, 0.3);
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(45deg, #04ffee, #180cff);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(4, 255, 238, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .contact-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .gradient-text {
+            font-size: 2rem;
+        }
+
+        .contact-form {
+            padding: 30px 20px;
+        }
+    }
+</style>

@@ -58,6 +58,7 @@ import ItemsMenu from './Items-menu.astro';
         position: fixed;
         top: 0;
         z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     }
 
     /* Parte superior del menú */
@@ -127,7 +128,8 @@ import ItemsMenu from './Items-menu.astro';
     .nav-links {
         display: flex;
         justify-content: center;
-        gap: 60px;
+        gap: 40px;
+        padding: 15px 0;
     }
 
     .nav-links li a {
@@ -142,6 +144,23 @@ import ItemsMenu from './Items-menu.astro';
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(-5px); }
         to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .menu-busqueda {
+            padding: 10px 20px;
+        }
+
+        .menu-busqueda .busqueda input {
+            width: 200px;
+        }
+
+        .nav-links {
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 </style>
 
